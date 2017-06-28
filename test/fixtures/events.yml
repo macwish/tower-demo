@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  when: 1
+  what: MyText
+  info: MyText
+  creation_time: 1
+
+two:
+  when: 1
+  what: MyText
+  info: MyText
+  creation_time: 1

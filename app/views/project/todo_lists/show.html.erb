@@ -1,0 +1,37 @@
+<p>
+  <strong>Name:</strong>
+  <%= @todo_list.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo_list.description %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= link_to(@todo_list.project.name, @todo_list.project) %>
+</p>
+
+<p>
+  <strong>Todos in this list:</strong>
+  <ul>
+    <% if @todo_list.todos.present? %>
+    <% @todo_list.todos.each do |todo| %>
+      <li>
+        <%= link_to(todo.content, todo, target: :_blank) %> 
+        [<%= todo.todo_items.size %>] 
+      </li>
+    <% end %>
+    <% end %>
+  </ul>
+</p>
+
+<br>
+
+<hr>
+
+<div>
+  <strong>New Todo:</strong>
+  <%= render 'form_for_new_todo', todo: @todo, member_hash: @member_hash %>
+</div>

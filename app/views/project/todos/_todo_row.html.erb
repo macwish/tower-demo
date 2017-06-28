@@ -1,0 +1,25 @@
+<tr>
+  <td><%= todo.id %></td>
+  <td><%= link_to(todo.title, todo) %></td>
+  <td>
+    <% if not todo.assignd_to_member_id.nil? %>
+      <%= link_to(
+        todo.assignd_to_member.display_name, 
+        todo.assignd_to_member, 
+        :target => :_blank) 
+      %>
+    <% else %>
+      -
+    <% end %>
+  </td>
+  <td>
+    <% if todo.deadline.present? %>
+      <%= format_timestamp(todo.deadline) %>
+    <% else %>
+      -
+    <% end %>
+  </td>
+  <td><%= todo.completed_status %></td>
+  <td><%= link_to 'Edit', edit_project_todo_path(todo) %></td>
+  <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

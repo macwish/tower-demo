@@ -1,0 +1,11 @@
+<%= link_to(
+  'Event', 
+  events_path,
+  class: "nav-item #{active_class('events')}") 
+%>
+
+<%= link_to(
+  'Todo', 
+  project_todos_path,
+  class: "nav-item #{active_class('todos')}") 
+%>

@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @todo.content %>
+</p>
+
+<p>
+  <strong>Assignd to:</strong>
+  <% if not @todo.assignd_to_member_id.nil? %>
+
+    <%= link_to(
+      @todo.assignd_to_member.display_name, 
+      @todo.assignd_to_member, 
+      :target => :_blank) 
+    %>
+    
+  <% else %>
+    -
+  <% end %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @todo.deadline %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @todo.completed_status %>
+</p>
+
+<p>
+  <strong>Belongs to list:</strong>
+  
+  <%= link_to(
+    @todo.todo_list.name, 
+    @todo.todo_list, 
+    :target => :_blank) 
+  %>
+
+</p>
+
+<%= link_to 'Edit', edit_project_todo_path(@todo) %>
+
+<hr>
+
+<div id="comment-list">
+  <% if not @comments.nil? %>
+  <%= render @comments %>
+  <% end %>
+</div>
+
+<div>
+  <%= render 'form_for_new_comment', comment: @comment %>
+</div>

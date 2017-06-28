@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  creator: 1
+  creation: 1
+  admin: 1
+  removed: false
+
+two:
+  name: MyString
+  creator: 1
+  creation: 1
+  admin: 1
+  removed: false

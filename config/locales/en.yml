@@ -1,0 +1,77 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  unknown: 'Unknown'
+  created: 'Created'
+  updated: 'Updated'
+  removed: 'Removed'
+  finished: 'Finished'
+  reworked: 'Reworked'
+  assigned: 'Assigned'
+  reassigned: 'Reassigned'
+  updated_content: 'Updated content'
+  changed_deadline: 'Changed deadline'
+  commented: 'Commented'
+
+  Project::Todo: 'Todo'
+  Comment: 'Comment'
+
+  activerecord:
+    errors:
+      models:
+        project/todo:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+
+        project/member:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+
+        project/member/role:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+                
+        project/todo_list:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'        

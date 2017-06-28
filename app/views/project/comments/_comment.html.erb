@@ -1,0 +1,21 @@
+
+<div class="comment" data-comment-id="<%= comment.id %>">
+
+  <div class="column avatar">
+
+    <%= link_to(comment.user.display_name, :target => :_blank) do %>
+      <%= image_tag(comment.user.avatar, :alt => 'avatar', :class => 'avatar-small') %>
+    <% end %>
+  </div>
+
+  <div class="column">
+    <%= link_to(comment.user.display_name, comment.user, :target => :_blank) %> 
+    <span class="gray"><%= comment.creation_time %></span>
+
+    <div class="comment-content">
+      <pre><%= comment.content %></pre>
+    </div>
+  </div>
+
+
+</div>

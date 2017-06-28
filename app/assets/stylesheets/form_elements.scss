@@ -1,0 +1,43 @@
+
+.btn {
+  color: #333;
+  background: #eee;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn:active {
+  opacity: 1;
+}
+.btn:focus {
+  opacity: 1;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #1ea4e5;
+}
+
+.textarea {
+  min-width: 400px;
+  min-height: 48px;
+  border: 1px solid #aaa;
+}
+
+.input {
+  // 
+}
+
+form {
+  input:not([submit]), select, textarea {
+    font-size: 16px;
+  }
+  input:not([submit]) {
+    padding: 4px;
+  }
+}
+

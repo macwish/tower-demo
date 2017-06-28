@@ -1,0 +1,60 @@
+
+<div 
+  class="event-block" 
+  data-event-id="<%= event.id %>">
+  
+  <div class="origin">
+    <%= link_to(
+      event.originrelated.origin_name, 
+      event.originrelated, 
+      :target => :_blank)
+    %>
+  </div>
+
+  <div class="column datetime">
+    <%= humanize_timestamp(event.time) %>
+  </div>
+
+  <div class="column avatar">
+
+    <!-- event-related user(avatar) -->
+    <%= link_to(event.user.display_name, :target => :_blank) do %>
+      <%= image_tag(event.user.avatar, :alt => 'avatar') %>
+    <% end %>
+
+  </div>
+
+  <div class="column">
+
+    <!-- event-related user(name) -->
+    <%= link_to(event.user.display_name, event.user, :target => :_blank) %>
+
+    <% if not event.eventrelated.nil? %>
+
+      <!-- action -->
+      <%= event.action_name %>: 
+      <%= link_to(
+        event.eventrelated.event_title[0..20], 
+        event.eventrelated.event_target, 
+        :target => :_blank) 
+      %>
+
+      <!-- event details -->
+      <%= render event.eventrelated %>
+
+    <% else %>
+
+      <!-- action -->
+      <%= event.action_name %>: 
+      <%= event.target %>
+
+      <!-- event details -->
+      <div>
+        <%= event.info[:description] if event.info.is_a? Hash %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

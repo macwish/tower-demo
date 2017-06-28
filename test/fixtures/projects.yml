@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: 1
+  name: MyString
+  description: MyString
+  type: 1
+  is_private: false
+  status: 1
+  pinned: false
+  icon: 1
+  color: 1
+  creator: 1
+  creation_time: 1
+  start_time: 1
+  end_time: 1
+  archived: false
+  removed: false
+
+two:
+  team: 1
+  name: MyString
+  description: MyString
+  type: 1
+  is_private: false
+  status: 1
+  pinned: false
+  icon: 1
+  color: 1
+  creator: 1
+  creation_time: 1
+  start_time: 1
+  end_time: 1
+  archived: false
+  removed: false

@@ -1,0 +1,153 @@
+html body * {
+  // 
+}
+
+body {
+  color: #333;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  text-indent: 20px
+}
+ul, ol, li {
+  list-style: none;
+}
+
+hr {
+  border: none;
+  background: #ddd;
+  height: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+a:hover {
+  background-color: #e5e5e5;
+}
+a:active {
+  background-color: #e0e0e0;
+}
+a:focus {
+  background-color: #ccc;
+}
+
+span.gray {
+  color: #aaa;
+}
+
+.container {
+
+  padding: 0 12px;
+  margin-top: 60px;
+
+  a {
+    color: #3f9bc6;
+  }
+  a:hover {
+    border-radius: 2px;
+  }
+}
+
+#top-bar {
+  opacity: 0.94;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #cfcfcf;
+
+  line-height: 48px;
+  height: 48px;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  a {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    min-width: 50px;
+    padding: 0 10px;
+  }
+
+  .logo img {
+    height: 76%;
+    vertical-align: middle;
+  }
+  .logo * {
+    height: inherit;
+  }
+  .aside-menu {
+    margin-left: auto;
+  }
+
+  .nav-item.active {
+    background-color: #e5e5e5;
+  }
+}
+
+#top-bar > nav {
+  height: inherit;
+  line-height: inherit;
+}
+
+.avatar-middle {
+  width: 220px;
+}
+
+.avatar-small {
+  width: 48px;
+}
+
+footer {
+  min-height: 80px;
+}
+
+// reset Rails default templete
+
+#notice {
+  color: #fff;
+  background: #3f9bc6;
+  border-radius: 2px;
+  padding: 0 6px;
+}
+div.field, form {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+table.records-table {
+  text-align: left;
+  width: 100%;
+
+  th {
+    color: #999;
+  }
+  td {
+    color: #aaa;
+  }
+  td {
+    word-break: break-all;
+  }
+}
+strong {
+  color: #a2a2a2;
+  font-weight: normal;
+}
+p {
+  margin: 6px 0;
+}
+
+

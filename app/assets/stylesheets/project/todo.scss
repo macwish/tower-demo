@@ -1,0 +1,11 @@
+
+#comment-list {
+  margin-left: 10px;
+  .comment {
+    margin: 4px 0;
+    display: flex;
+    .column {
+      margin: 0 4px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<%= form_with(model: todo, local: true) do |form| %>
+
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+      <% todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.hidden_field :todo_list_id, id: :todo_todo_list_id %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :content, id: :todo_content, class: 'textarea', placeholder: 'Type your todo contents here' %>
+  </div>
+
+  <div class="field">
+    <%= form.select :assignd_to_member_id, options_for_select(member_hash), prompt: 'Assign to a member?', id: :todo_assignd_to_member_id %>
+  </div>
+
+  <div class="field">
+    <%= form.number_field :deadline, id: :todo_deadline, placeholder: 'Deadline' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

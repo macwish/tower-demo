@@ -1,0 +1,44 @@
+
+zh-CN:
+  unknown: '未知'
+  created: '创建了'
+  updated: '更新了'
+  removed: '删除了'
+  finished: '完成了'
+  reworked: '重做了'
+  assigned: '指派了'
+  reassigned: '重新指派了'
+  updated_content: '更新了(内容)'
+  changed_deadline: '更新了截止时间'
+  commented: '回复了'
+
+  activerecord:
+    errors:
+      models:
+        project/todo:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+
+        project/member:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+
+        project/member/role:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'
+                
+        project/todo_list:
+            attributes:
+              project:
+                permission_deny_unreadable: 'permission deny (unreadable)'
+                permission_deny_uneditable: 'permission deny (uneditable)'
+                permission_deny_unremovable: 'permission deny (unremovable)'        

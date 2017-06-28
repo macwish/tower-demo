@@ -1,0 +1,17 @@
+<header id="top-bar">
+  
+  <nav class="logo">
+    <%= link_to(root_path) do %>
+      <%= image_tag("/static/images/up.png", :alt => 'Logo') %>
+    <% end %>
+  </nav>
+  
+  <nav class="main-menu">
+    <%= render :partial => 'layouts/subviews/nav_main_menu' %>
+  </nav>
+  
+  <nav class="aside-menu">
+    <%= render :partial => 'layouts/subviews/nav_aside_menu' %>
+  </nav>
+
+</header>

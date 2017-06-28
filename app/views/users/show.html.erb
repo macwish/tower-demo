@@ -1,0 +1,16 @@
+<p>
+  <%= link_to(@user.display_name, :target => :_blank) do %>
+    <%= image_tag(@user.avatar, :alt => 'avatar', :class => 'avatar-small') %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+

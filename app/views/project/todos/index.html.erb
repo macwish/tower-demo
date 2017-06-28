@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<table class="records-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Content</th>
+      <th>Assignd to</th>
+      <th>Deadline</th>
+      <th>Completed</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% if not @todo_hash.nil? %>
+    <% @todo_hash.each do |project, todo_list_hash| %>
+
+      <% if not todo_list_hash.nil? %>
+      <% todo_list_hash.each do |todo_list, todos| %>
+
+        <% if not todos.nil? %>
+        <% todos.each do |todo| %>
+          <%= render partial: 'todo_row', locals: {project: project, todo_list: todo_list, todo: todo} %> 
+        <% end %>
+        <% end %>
+
+      <% end %>  
+      <% end %>
+
+    <% end %>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+

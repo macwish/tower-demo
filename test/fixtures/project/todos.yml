@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  todo_list_id: 1
+  content: MyString
+  assign_to_member_id: 1
+  deadline: 1
+  creator_id: 1
+  creation_time: 1
+  completed: false
+  trashed: false
+
+two:
+  todo_list_id: 1
+  content: MyString
+  assign_to_member_id: 1
+  deadline: 1
+  creator_id: 1
+  creation_time: 1
+  completed: false
+  trashed: false

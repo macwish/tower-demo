@@ -1,0 +1,87 @@
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @project.type %>
+</p>
+
+<p>
+  <strong>Is private:</strong>
+  <%= @project.is_private %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project.status %>
+</p>
+
+<p>
+  <strong>Belongs to team:</strong>
+  <%= link_to(@project.team.name, @project.team) %>
+</p>
+
+<p>
+  <strong>Todo List:</strong>
+  <ul>
+    <% if @project.todo_lists.present? %>
+      <% @project.todo_lists.each do |todo_list| %>
+        <li>
+          <%= link_to(
+            todo_list.name, 
+            todo_list) 
+          %> 
+          [<%= todo_list.todos.size %>] 
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Project Members:</strong>
+  <ul>
+
+    <% if @project.members.present? %>
+    <% @project.members.each do |member| %>
+
+      <li class="member">
+        <span><%= link_to(member.user.display_name, member.user) %> </span>
+        <div class="roles">
+
+          <% if member.roles.present? %>
+          <% member.roles.each do |role| %>
+            
+            <p>
+              <strong>role name:</strong> 
+              <%= role.name %>
+            </p>
+
+            <p>
+              <strong>permissions:</strong> 
+              <% if role.accesses.present? %>
+              <% role.accesses.each do |access| %>
+                <%= Permission.types.key(access.permission) %> &nbsp;
+              <% end %>
+              <% end %>
+            </p>
+
+          <% end %>
+          <% end %>
+
+        </div>
+      </li>
+    
+    <% end %>
+    <% end %>
+
+  </ul>
+</p>
+

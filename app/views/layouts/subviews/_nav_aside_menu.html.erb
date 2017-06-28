@@ -1,0 +1,17 @@
+<% if @current_user.nil? %>
+
+  <%= link_to(
+    'Login', 
+    '#', 
+    class: "nav-item #{active_class('auths')}") 
+  %>
+
+<% else %>
+
+  <%= link_to(
+    @current_user.display_name, 
+    profile_users_path, 
+    class: "nav-item #{active_class('users')}") 
+  %>
+
+<% end %>

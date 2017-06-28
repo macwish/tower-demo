@@ -1,0 +1,41 @@
+
+.event-block {
+  
+  display: flex;
+  position: relative;
+
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+
+  .origin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+      color: #ddd;
+    }
+    a:hover {
+      color: #999;
+    }
+  }
+
+  .column {
+    margin: auto 8px;
+    a {
+      display: inline-block;
+    }
+  }
+  .datetime {
+    color: #aaa;
+    min-width: 60px;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .avatar * {
+    width: inherit;
+    height: inherit;
+  }
+}
+

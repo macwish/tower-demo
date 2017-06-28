@@ -1,0 +1,44 @@
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= link_to(@team.creator.display_name, @team.creator) %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= link_to(@team.admin.display_name, @team.admin) %>
+</p>
+
+<p>
+  <strong>Removed:</strong>
+  <%= @team.removed %>
+</p>
+
+<p>
+  <strong>Project List:</strong>
+  <ul>
+    <% if @team.projects.present? %>
+      <% @team.projects.each do |project| %>
+        <li>
+          <%= link_to(project.name, project) %> 
+          [<%= project.todo_lists.size %>] 
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</p>
+
+<p>
+  <strong>Team Members:</strong>
+  <ul>
+    <% if @team.members.present? %>
+      <% @team.members.each do |member| %>
+        <li><%= link_to(member.user.display_name, member.user) %> </li>
+      <% end %>
+    <% end %>
+  </ul>
+</p>
