@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
+    @title = "User/Profile - #{@user.name}"
   end
 
   def show

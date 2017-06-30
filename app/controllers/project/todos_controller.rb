@@ -9,7 +9,7 @@ class Project::TodosController < ProjectBaseController
     count = params[:count]
     count = (1..100).include?(count) ? count : 100
 
-    projects = current_user.peojects
+    projects = current_user.projects || []
     projects.each do |project|
       todo_lists = project.todo_lists
       next if todo_lists.nil?
@@ -82,11 +82,11 @@ class Project::TodosController < ProjectBaseController
     end
 
     def todo_params_for_create
-      params.require(:project_todo).permit(:todo_list_id, :content, :assignd_to_member_id, :deadline, :completed, :trashed)
+      params.require(:project_todo).permit(:todo_list_id, :content, :assigned_to_member_id, :deadline, :completed, :trashed)
     end
 
     def todo_params_for_update
-      params.require(:project_todo).permit(:content, :assignd_to_member_id, :deadline, :completed, :trashed)
+      params.require(:project_todo).permit(:content, :assigned_to_member_id, :deadline, :completed, :trashed)
     end
 
 end

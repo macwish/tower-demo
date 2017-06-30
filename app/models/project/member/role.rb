@@ -15,7 +15,6 @@ class Project::Member::Role < ProjectBase
   has_many :accesses, as: :accessrelated,  dependent: :destroy
 
   validates :member_id, :type, :presence => true
-
   validates :type, inclusion: types.keys
 
   def project

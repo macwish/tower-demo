@@ -1,0 +1,28 @@
+todo_list_1_1:
+  id: 1
+  project_id: 1    # belongs to project_1_1 (project_id = 1)
+  name: default
+  description: default todo list 1-1 (belongs to project_1_1)
+  trashed: false
+
+todo_list_1_2:
+  id: 2
+  project_id: 1    # belongs to project_1_1 (project_id = 1)
+  name: my todo list
+  description: custom todo list 1-2 (belongs to project_1_1)
+  trashed: false
+
+todo_list_2_1:
+  id: 3
+  project_id: 2    # belongs to project_1_2 (project_id = 2)
+  name: default
+  description: default todo list 1-1 (belongs to project_1_2)
+  trashed: false
+
+todo_list_3_1:
+  id: 4
+  project_id: 3    # belongs to project_2_1 (project_id = 3)
+  name: default
+  description: default todo list 1-1 (belongs to project_2_1)
+  trashed: false
+  

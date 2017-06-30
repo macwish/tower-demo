@@ -1,9 +1,5 @@
 class EventsController < ApplicationController
 
-  # before_action :only => [:index] do 
-  #   set_default_response_format(:event)
-  # end
-
   def index
     @title = "Events"
 

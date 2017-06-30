@@ -2,10 +2,10 @@
   <td><%= todo.id %></td>
   <td><%= link_to(todo.title, todo) %></td>
   <td>
-    <% if not todo.assignd_to_member_id.nil? %>
+    <% if not todo.assigned_to_member_id.nil? %>
       <%= link_to(
-        todo.assignd_to_member.display_name, 
-        todo.assignd_to_member, 
+        todo.assigned_to_member.display_name, 
+        todo.assigned_to_member, 
         :target => :_blank) 
       %>
     <% else %>

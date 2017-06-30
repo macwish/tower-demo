@@ -6,7 +6,7 @@ class ProjectsController < ProjectBaseController
   def list
     @title = "Project/List"
 
-    @projects = current_user.peojects
+    @projects = current_user.projects || []
   end
 
   def show

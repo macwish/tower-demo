@@ -1,17 +1,69 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  email: MyString
-  password: MyString
-  name: MyString
-  status: 1
-  creation_time: 1
+user_1:
+  email: user_1@example.com
+  password: my_raw_passwd
+  name: user_1
+  status: 0
   removed: false
 
-two:
-  email: MyString
-  password: MyString
-  name: MyString
-  status: 1
-  creation_time: 1
+user_2:
+  email: user_2@example.com
+  password: my_raw_passwd
+  name: user_2
+  status: 0
+  removed: false
+
+user_3:
+  email: user_3@example.com
+  password: my_raw_passwd
+  name: user_3
+  status: 0
+  removed: false
+
+user_4:
+  email: user_4@example.com
+  password: my_raw_passwd
+  name: user_4
+  status: 0
+  removed: false
+
+user_5:
+  email: user_5@example.com
+  password: my_raw_passwd
+  name: user_5
+  status: 0
+  removed: false
+
+user_6:
+  email: user_6@example.com
+  password: my_raw_passwd
+  name: user_6
+  status: 0
+  removed: false
+
+user_7:
+  email: user_7@example.com
+  password: my_raw_passwd
+  name: user_7
+  status: 0
+  removed: false
+
+user_8:
+  email: user_8@example.com
+  password: my_raw_passwd
+  name: user_8
+  status: 0
+  removed: false
+
+user_9:
+  email: user_9@example.com
+  password: my_raw_passwd
+  name: user_9
+  status: 0
+  removed: false
+
+user_10:
+  email: user_10@example.com
+  password: my_raw_passwd
+  name: user_10
+  status: 0
   removed: false

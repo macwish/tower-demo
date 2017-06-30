@@ -1,24 +1,37 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### README
 
-Things you may want to cover:
+### 1. Prepare for running (server or testing)
 
-* Ruby version
+database init
 
-* System dependencies
+```
+bin/rails db:migrate RAILS_ENV=development
+bin/rails db:seed RAILS_ENV=development
 
-* Configuration
+bin/rails db:migrate RAILS_ENV=test
+```
 
-* Database creation
+start redis server  
 
-* Database initialization
+```
+redis-server
+```
 
-* How to run the test suite
+### 2. How to run server
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle exec sidekiq --config ./config/sidekiq.yml RAILS_ENV='development'
+```
 
-* Deployment instructions
+```
+bin/rails server -b '127.0.0.1' -p 9090 RAILS_ENV='development'
+```
 
-* ...
+open [http://127.0.0.1:9090](http://127.0.0.1:9090) in your brower
+
+### 3. How to run testing
+
+```
+bundle exec rspec
+```

@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   end
   
   # comments (show and create)
-  resources :comments, only: [:show, :new, :create]
+  resources :comments, only: [:show, :create]
 
   # events (list-only)
   resources :events, only: [:index]

@@ -5,7 +5,7 @@ class ProjectBase < ApplicationRecord
   before_update  :check_editable_permissions
   before_destroy :check_removable_permissions
 
-  # return: ralated project
+  # return: related project
   def project
     raise NotImplementedError, 'subclasses must define "project"'
   end

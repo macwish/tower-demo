@@ -31,7 +31,7 @@ if auth_count == 0
   Auth.transaction do
     begin
       User.all.each do |user|
-        token = 'access_token_' + user.id.to_s
+        token = "user#{user.id}_access_token_#{user.id}"
         Auth.create!({
           user_id: user.id,
           token: token,
@@ -50,8 +50,8 @@ end
 team_count = Team.all.size
 if team_count == 0
   puts 'will create teams...'
-  user1 = User.find(10)
-  user2 = User.find(11)
+  user1 = User.find(1)
+  user2 = User.find(2)
   Team.transaction do
     begin
       Team.create!([
@@ -82,7 +82,7 @@ team_member_count = Team::Member.all.size
 if team_member_count == 0
   puts 'will create team members...'
   team = Team.find(1)
-  users = User.where("id >= ?", 10).limit(5)
+  users = User.where("id >= ?", 1).limit(5)
   Team::Member.transaction do
     begin
       users.each do |user|
@@ -178,7 +178,7 @@ if project_member_count == 0
       # user-1 belongs to two projects.
       Project::Member.create!({
         project_id: Project.find(2).id,
-        user_id: User.find(10).id,
+        user_id: User.find(1).id,
       })
     rescue ActiveRecord::StatementInvalid => e
       # ignored for db rollback
@@ -301,7 +301,7 @@ if project_todo_count == 0
         Project::Todo.create!({
           todo_list_id: todo_list.id,
           content: content,
-          assignd_to_member_id: user.id,
+          assigned_to_member_id: user.id,
           deadline: 50.days.from_now.to_i,
           completed: false,
           trashed: false,
@@ -345,12 +345,12 @@ end
 comment_count = Comment.all.size
 if comment_count == 0
   puts 'will create comments...'
-  user = User.find(10)
+  user = User.find(1)
   todo_list = Project::TodoList.find(1)
   todo = todo_list.todos.first
   Comment.transaction do
     begin
-      (1..10).each do |i|
+      (1..3).each do |i|
         content = 'comment_' + i.to_s + ' content...'
         Comment.create!({
           content: content,
@@ -371,7 +371,7 @@ end
 event_count = Event.all.size
 if event_count < 200
   puts 'will create events...'
-  user = User.find(10)
+  user = User.find(1)
   project = Project.find(1)
   raise RuntimeError.new('nil project') if project.nil?
   todo_list = project.todo_lists.first

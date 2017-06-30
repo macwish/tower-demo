@@ -9,7 +9,7 @@ class Project::Todo < ProjectBase
   has_many :comments, as: :commentable,  dependent: :destroy
   has_many :related_events, class_name: 'Event', as: :eventrelated, dependent: :destroy
 
-  has_one :assignd_to_member, class_name: 'User', foreign_key: 'id', required: false
+  belongs_to :assigned_to_member, class_name: 'User', optional: true
 
   validates :todo_list_id, :content, :presence => true
 

@@ -5,16 +5,10 @@ class CommentsController < ApplicationController
   def show
     @title = "Comment/Show - #{@comment.id}"
   end
-
-  def new
-    @title = "Comment/New"
-
-    @comment = Comment.new
-  end
   
   def create
     @comment = Comment.new(comment_params)
-
+    
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @comment.commentable, notice: 'Comment was successfully created.' }

@@ -1,0 +1,45 @@
+todo_1_1:
+  id: 1
+  todo_list_id: 1    # team 1 > project 1 > todo_list 1
+  content: todo 1, do something ...
+  assigned_to_member_id: 1   # user 1 (user_id = 1, belongs to project 1)
+  deadline: 
+  completed: false
+  trashed: false
+
+todo_1_2:
+  id: 2
+  todo_list_id: 1
+  content: todo 2, do something ...
+  assigned_to_member_id: 1
+  deadline: 
+  completed: false
+  trashed: false
+
+todo_1_3:
+  id: 3
+  todo_list_id: 1
+  content: todo 3, do something (completed)
+  assigned_to_member_id: 1
+  deadline: 
+  completed: true    # completed = true
+  trashed: false
+
+todo_1_4:
+  id: 4
+  todo_list_id: 1
+  content: todo 4, do something ...
+  assigned_to_member_id:  # without assigned
+  deadline: 
+  completed: false
+  trashed: false
+
+todo_1_5:
+  id: 5
+  todo_list_id: 1
+  content: todo 5, do something (trashed)
+  assigned_to_member_id: 1
+  deadline: 
+  completed: false
+  trashed: true     # trashed = true
+

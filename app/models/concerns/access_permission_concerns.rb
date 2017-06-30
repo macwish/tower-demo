@@ -15,7 +15,7 @@ module AccessPermissionConcerns
 
     roles.each do |role|
       accesses = role.accesses
-      next if accesses.nil?  # no 'access' assignd to this role
+      next if accesses.nil?  # no 'access' assigned to this role
 
       # query accesses in 'Project' scope
       access_list = accesses.where(scope: Project.name)

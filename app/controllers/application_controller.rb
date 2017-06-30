@@ -21,11 +21,12 @@ class ApplicationController < ActionController::Base
       ssid = 'my_ssid'
 
       auth = Auth.find_by_ssid(ssid)
-      @current_user = auth.user
+      permission_denied and return if auth.nil?
       
+      @current_user = auth.user
       ApplicationRecord.current_user = @current_user
 
-      permission_denied if current_user.nil?
+      permission_denied and return if current_user.nil?
       return true
     end
 

@@ -20,8 +20,8 @@ module TodoConcerns
         end
       end
 
-      if saved_change_to_attribute?(:assignd_to_member_id)
-        if self.assignd_to_member_id_before_last_save.nil?
+      if saved_change_to_attribute?(:assigned_to_member_id)
+        if self.assigned_to_member_id_before_last_save.nil?
           new_event('assigned')
         else
           new_event('reassigned')

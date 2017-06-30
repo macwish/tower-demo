@@ -6,5 +6,6 @@ class CreateAuths < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :auths, [:user_id, :token], :unique => true
   end
 end
